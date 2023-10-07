@@ -1,0 +1,20 @@
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>myfunction</short-name>
+    <uri>/WEB-INF/tlds/myFunction</uri>
+    <function>
+        <name>parentCmt</name>
+        <function-class>spring.controller.PublicController</function-class>
+        <function-signature>
+               String parentCmt(java.util.List)
+        </function-signature>
+    </function>
+     
+    <function>
+        <name>childCmt</name>
+        <function-class>spring.controller.PublicController</function-class>
+        <function-signature>
+               String childCmt(java.util.List)
+        </function-signature>
+    </function>
+</taglib>

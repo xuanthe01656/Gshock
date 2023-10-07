@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+  <definition name="template.public" template="/WEB-INF/views/templates/public/index.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/components/public/header.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="footer" value="/WEB-INF/views/components/public/footer.jsp" />
+  </definition>
+  
+  <definition name="public.index" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/index.jsp" />
+  </definition>
+  <definition name="public.cat" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/cat.jsp" />
+  </definition>
+  <definition name="public.cat-detail" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/cat_detail.jsp" />
+  </definition>
+  <definition name="public.product" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/product_detail.jsp" />
+  </definition>
+  <definition name="public.cart" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/cart.jsp" />
+  </definition>
+  <definition name="public.contact" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/contact.jsp" />
+  </definition>
+  <definition name="public.news" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/news.jsp" />
+  </definition>
+   <definition name="public.news-detail" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/news_detail.jsp" />
+  </definition>
+   <definition name="public.introduce" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/introduce.jsp" />
+  </definition>
+  <definition name="public.payment" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/payments.jsp" />
+  </definition>
+  <definition name="public.payment-paypal" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/payments-paypal.jsp" />
+  </definition>
+  <definition name="public.my-order" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/my_order.jsp" />
+  </definition>
+   <definition name="public.profile" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/profile.jsp" />
+  </definition>
+  <definition name="public.paymentManagement" extends="template.public">
+    <put-attribute name="body" value="/WEB-INF/views/views/public/payment_management.jsp" />
+  </definition>
+  
+</tiles-definitions>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+		 xmlns:beans="http://www.springframework.org/schema/beans"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		 				https://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/security 
+						https://www.springframework.org/schema/security/spring-security.xsd">
+						
+	
+ 	
+	<http use-expressions="true" auto-config="true" pattern="/**/public/**" authentication-manager-ref="manager2" >
+	<csrf disabled="true"/>
+	<intercept-url pattern="/public/**" access="permitAll()"/>
+		<form-login  login-page="/auth/public/login" 
+					login-processing-url="/auth/public/login" 
+					default-target-url="/public/index" 
+					always-use-default-target="false" 
+					authentication-failure-url="/auth/public/login?error=loginErr" 
+					username-parameter="username" 
+					password-parameter="password"/>
+		<logout logout-url="/auth/public/logout" 
+				logout-success-url="/auth/public/login" 
+				delete-cookies="JSESSIONID" 
+				invalidate-session="true"/>
+		<access-denied-handler error-page="/403"/>
+		
+	</http>
+	<beans:bean name="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	
+	
+	<authentication-manager id="manager2" >
+		<!-- from database -->
+		<authentication-provider>
+			<password-encoder ref="bcryptEncoder" />
+			<jdbc-user-service 	data-source-ref="ds"
+								users-by-username-query="select username, password, enable from user where username=?"
+								authorities-by-username-query="select username, concat('ROLE_', r.name) role from user as u inner join roles as r on r.id = u.role_id where username= ? "
+								/>
+		</authentication-provider>
+	</authentication-manager>
+	<!-- 
+	users-by-username-query="select username, password, enable from user where username=?"
+								authorities-by-username-query="select username, concat('ROLE_', r.name) role from user as u inner join roles as r on r.id = u.role_id where username= ? "
+	authorities-by-username-query="select username, concat('ROLE_', name) role from admin as u inner join roles as r on r.id = u.role_id where username= ? "
+	authorities-by-username-query="select username, concat('ROLE_', r.name) role from user as u inner join roles as r on r.id = u.role_id where username= ? "
+	<user-service>
+		<user name="username" password="password" authorities="ROLE_USER" />
+	</user-service> -->
+	
+</beans:beans>

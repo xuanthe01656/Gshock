@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+  <definition name="template.admin" template="/WEB-INF/views/templates/admin/index.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/components/admin/header.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="leftbar" value="/WEB-INF/views/components/admin/leftbar.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/components/admin/footer.jsp" />
+  </definition>
+  
+ <!--  <definition name="auth.login" template="/WEB-INF/views/views/auth/login.jsp">
+  </definition> -->
+  
+  <definition name="admin.index" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/index.jsp" />
+  </definition>
+  <definition name="admin.product" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-product.jsp" />
+  </definition>
+   <definition name="admin.product-detail" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-product_detail.jsp" />
+  </definition>
+  <definition name="admin.add-product" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-add-product.jsp" />
+  </definition>
+  <definition name="admin.edit-product" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-edit-product.jsp" />
+  </definition>
+  <definition name="admin.cat" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-category.jsp" />
+  </definition>
+   <definition name="admin.add-cat" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-add-category.jsp" />
+  </definition>
+  <definition name="admin.edit-cat" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-edit-category.jsp" />
+  </definition>
+   <definition name="admin.user" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-users.jsp" />
+  </definition>
+  <definition name="admin.add-user" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-add-users.jsp" />
+  </definition>
+  <definition name="admin.edit-user" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-edit-users.jsp" />
+  </definition>
+  <definition name="admin.customer" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-customers.jsp" />
+  </definition>
+  <definition name="admin.add-customer" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-add-customers.jsp" />
+  </definition>
+  <definition name="admin.edit-customer" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-edit-customers.jsp" />
+  </definition>
+  <definition name="admin.supplier" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-supplier.jsp" />
+  </definition>
+  <definition name="admin.country" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-country.jsp" />
+  </definition>
+  <definition name="admin.add-supcntry" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-add-sup-cntry.jsp" />
+  </definition>
+  <definition name="admin.edit-supplier" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-edit-supplier.jsp" />
+  </definition>
+  <definition name="admin.edit-country" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-edit-country.jsp" />
+  </definition>
+  <definition name="admin.order" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-order.jsp" />
+  </definition>
+   <definition name="admin.order-detail" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-list-order_detail.jsp" />
+  </definition>
+  <definition name="admin.profile" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/user-profile.jsp" />
+  </definition>
+  <definition name="admin.depositwithdrawal" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/depositwithdrawal.jsp" />
+  </definition>
+  <definition name="admin.atmadmin" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/atmadmin.jsp" />
+  </definition>
+  <definition name="admin.atmcustomer" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/atmcustomer.jsp" />
+  </definition>
+   <definition name="admin.lockxu" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/lockxu.jsp" />
+  </definition>
+  <definition name="admin.add-atmadmin" extends="template.admin">
+    <put-attribute name="body" value="/WEB-INF/views/views/admin/page-add-atmadmin.jsp" />
+  </definition>
+  
+</tiles-definitions>
